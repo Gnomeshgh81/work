@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    contentnegotiation:
+      favor-parameter: true #开启基于请求参数的内容协商，这里开启之后，只要在请求头中加入一个format参数，调成什么格式，后端就会返回什么格式
+      # 访问的路径就是：http://localhost:8080/test/getUser?format=xml
+  datasource:
+    url: jdbc:mysql://localhost:3306/work
+    username: root
+    password: Lcwszdhnsh123@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  #指定mybatis的全局配置文件在哪里
+  config-location: classpath:mybatis/mybatis-config.xml
+  #制定sql文件的位置
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+server:
+  port: 8182
