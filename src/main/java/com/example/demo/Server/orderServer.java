@@ -1,5 +1,6 @@
 package com.example.demo.Server;
 
+import com.example.demo.Entity.dd;
 import com.example.demo.Entity.diancan;
 import com.example.demo.Entity.main;
 import com.example.demo.Entity.menu;
@@ -7,6 +8,7 @@ import com.example.demo.Mapper.orderMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -29,6 +31,28 @@ public class orderServer {
 
     public diancan getList(int t) {
         return orderMapper.getList(t);
+    }
+
+    /**
+     * 获取点餐列表
+     * @param t
+     * @return
+     */
+    public List<dd> getOrderList(int t) {
+        diancan list = orderMapper.getList(t);
+        List<dd> re = new ArrayList<>();
+
+
+        if (list.getA() != 0) re.add(new dd(getMenuById(1), list.getA()));
+        if (list.getB() != 0) re.add(new dd(getMenuById(2), list.getB()));
+        if (list.getC() != 0) re.add(new dd(getMenuById(3), list.getC()));
+        if (list.getD() != 0) re.add(new dd(getMenuById(4), list.getD()));
+        if (list.getE() != 0) re.add(new dd(getMenuById(5), list.getE()));
+        if (list.getF() != 0) re.add(new dd(getMenuById(6), list.getF()));
+        if (list.getG() != 0) re.add(new dd(getMenuById(7), list.getG()));
+        if (list.getH() != 0) re.add(new dd(getMenuById(8), list.getH()));
+        if (list.getI() != 0) re.add(new dd(getMenuById(9), list.getI()));
+        return re;
     }
 
     public void createDiancan(int t) {

@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import com.example.demo.Entity.dd;
 import com.example.demo.Entity.diancan;
 import com.example.demo.Entity.main;
 import com.example.demo.Entity.menu;
@@ -59,6 +60,12 @@ public class orderController {
     public diancan getList() {
         int t = getId();
         return orderServer.getList(t);
+    }
+
+    @GetMapping("/getOrderList")
+    public List<dd> getOrderList() {
+        int t = getId();
+        return orderServer.getOrderList(t);
     }
 
     @GetMapping("/getMenu")
