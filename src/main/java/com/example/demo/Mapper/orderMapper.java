@@ -14,4 +14,7 @@ public interface orderMapper {
     void delete(Integer id);
     List<menu> getMenu();
     menu getMenuById(Integer id);
+
+    int getCount(int t);
+
 }

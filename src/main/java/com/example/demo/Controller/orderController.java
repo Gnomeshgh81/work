@@ -77,6 +77,12 @@ public class orderController {
         return orderServer.getSum();
     }
 
+    @GetMapping("/getCount")
+
+    public int getCount() {
+        return orderServer.getCount();
+    }
+
 
 
 }

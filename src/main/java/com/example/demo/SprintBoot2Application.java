@@ -10,5 +10,4 @@ public class SprintBoot2Application {
     public static void main(String[] args) {
         SpringApplication.run(SprintBoot2Application.class, args);
     }
-
 }

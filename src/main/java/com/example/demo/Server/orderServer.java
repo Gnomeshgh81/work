@@ -85,4 +85,9 @@ public class orderServer {
         }
         return sum;
     }
+
+    public int getCount() {
+        int t = getId();
+        return orderMapper.getCount(t);
+    }
 }

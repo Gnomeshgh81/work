@@ -32,5 +32,9 @@
         select * from menu where id = #{id}
     </select>
 
+    <select id="getCount" resultType="int">
+        select `count` from main where id = #{t}
+    </select>
+
 
 </mapper>
