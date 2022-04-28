@@ -36,5 +36,9 @@
         select `count` from main where id = #{t}
     </select>
 
+    <update id="changeCount" parameterType="int">
+        update `main` set `count` = #{count} where id = #{t}
+    </update>
+
 
 </mapper>

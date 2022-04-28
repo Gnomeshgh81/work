@@ -12,3 +12,4 @@
 | localhost:8182/getSum       | 无                                        | 获取一共花费多少钱                                           | 返回一个数字，表示当前点这些需要花多少钱                     |
 | localhost:8182/getCount     | 无                                        | 获取当前点餐人数                                             | 返回一个数字，表示当前点餐人数                               |
 | localhost:8182/getOrderList | 无                                        | 获取当前点餐的信息，包括点了哪些食物的编号，食物的名字等信息，点了多少个 | 返回一个{m:{}, count:}，其中m表示食物信息，count表示点了几个。 |
+| localhost:8182/changeCount   | 一个count，是将人数修改为多少             | 将用餐人数修改为多少                                         | 返回"Success"                                                |

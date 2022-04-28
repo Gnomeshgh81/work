@@ -85,11 +85,14 @@ public class orderController {
     }
 
     @GetMapping("/getCount")
-
     public int getCount() {
         return orderServer.getCount();
     }
 
+    @PostMapping("/changeCount")
 
+    public String changeCount(Integer count) {
+        return orderServer.changeCount(count);
+    }
 
 }

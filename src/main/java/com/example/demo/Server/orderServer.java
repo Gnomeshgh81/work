@@ -114,4 +114,10 @@ public class orderServer {
         int t = getId();
         return orderMapper.getCount(t);
     }
+
+    public String changeCount(Integer count) {
+        int t = getId();
+        orderMapper.changeCount(t, count);
+        return "Success";
+    }
 }

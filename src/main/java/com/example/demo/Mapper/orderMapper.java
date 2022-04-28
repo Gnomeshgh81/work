@@ -17,4 +17,5 @@ public interface orderMapper {
 
     int getCount(int t);
 
+    void changeCount(Integer t, Integer count);
 }
